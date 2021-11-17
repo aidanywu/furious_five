@@ -13,13 +13,16 @@
 ### 4. [Implementation Progress](#progress)
 
 ## Contributors <a id="contributors" name="contributors"></a>
-| Name | GitHub ID and Profile | Role | Commits |
-|:-----|:----------------------|:-----:|:-------:|
-| Vaishavi Jayashankar | [@vaishavijay](https://github.com/vaishavijay) | Scrum Master | [Commits](https://github.com/aidanywu/furious_five/commits?author=vaishavijay)
-| Gray Zhuang | [@wangzi190](https://github.com/wangzi190) | Technicals Officer | [Commits](https://github.com/aidanywu/furious_five/commits?author=wangzi190)
+| Name | GitHub ID and Profile | Role | Commits | Tasks | Scrumboard |
+|:-----|:----------------------|:----:|:-------:|:-----:|:----------:|
+| Vaishavi Jayashankar | [@vaishavijay](https://github.com/vaishavijay) | Scrum Master | [Commits](https://github.com/aidanywu/furious_five/commits?author=vaishavijay) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Avaishavijay) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Avaishavijay)
+| Gray Zhuang | [@wangzi190](https://github.com/wangzi190) | Technicals Officer | [Commits](https://github.com/aidanywu/furious_five/commits?author=wangzi190) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awangzi190) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awangzi190)
+| Aidan Wu | [@aidanywu](https://github.com/aidanywu) | Github Admin | [Commits](https://github.com/aidanywu/furious_five/commits?author=aidanywu) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Aaidanywu) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Aaidanywu)
+| William Wu | [@willcyber](https://github.com/willcyber) | Primary Designer | [Commits](https://github.com/aidanywu/furious_five/commits?author=willcyber) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awillcyber) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awillcyber)
+| William Li | [@3ghin5](https://github.com/3ghin5) | Deployment Manager | [Commits](https://github.com/aidanywu/furious_five/commits?author=3ghin5) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3A3ghin5) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3A3ghin5)
 
 ## Pair Share Journals <a id="journals" name="journals"></a>
-#### [Link to _____’s folder](https://drive.google.com)
+#### [Link to Aidan Wu and William Wu’s folder](https://docs.google.com/document/d/1Byg2xdhazwebff4lFHdSSj-k-xkj035d9EHa7PSV_1A/edit?usp=sharing)
 #### [Link to _____’s folder](https://drive.google.com)
 
 ## Ideation <a id="idea" name="idea"></a>
