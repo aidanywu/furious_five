@@ -1,44 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
-{% set basename = "Furious Five" %}
-
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Your Mom</title>
+    {%block head%}
 
-    <style>
-
-         body{
-            margin: 0;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: black;
-            font-family: Trebuchet MS;
-        }
-
-         title{
-             color:black;
-         }
-
-        h1{
-            font-size: 5em;
-            color:black
-        }
-
-        a {
-            color: midnightblue;
-        }
-
-    </style>
-
-    <title>{{ basename }} | Home </title>
-
+    {%endblock%}
 </head>
 
 <body>
 {% include "layouts/navbar.html" %}
-</body>
+{%block body%}
 
+{%endblock%}
+</body>
 </html>

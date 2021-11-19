@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    height: 100%;
+    color: black;
+    font-family: Trebuchet MS;
+}
+
+
+h1{
+    font-size: 5em;
+    color: black;
+}
+
+a {
+    color: midnightblue;
+}

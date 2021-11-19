@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 
 # connects default URL to render index.html
-@app.route('/')
+@app.route("/")
 def index():
     return render_template("index.html")
 
 
-@app.route('/aboutus/')
+@app.route("/aboutus/")
 def aboutus():
     return render_template("aboutus.html")
 
