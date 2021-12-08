@@ -1,5 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template
+import requests
+import json
 #test
 #another test
 # create a Flask instance
@@ -21,6 +23,17 @@ def aboutus():
 def williamli():
     return render_template("williamli.html")
 
+
+@app.route("/worldclock/")
+def worldclock():
+    url = "https://world-clock.p.rapidapi.com/json/pst/now"
+    headers = {
+        'x-rapidapi-host': "world-clock.p.rapidapi.com",
+        'x-rapidapi-key': "1d9c0e5dd4msh00cea2fa8d7699fp1dfecdjsn1cf8da6644a9"
+    }
+    response = requests.request("GET", url, headers=headers)
+    time = json.loads(response.text)
+    return render_template("worldclock.html", time=time)
 
 # runs the application on the development server
 if __name__ == "__main__":
