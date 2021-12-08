@@ -1,6 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template
-
+#test
+#another test
 # create a Flask instance
 app = Flask(__name__)
 
@@ -24,3 +25,12 @@ def williamli():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
+finalpage = 586
+initialpage = 571
+
+value = finalpage - initialpage + 1
+if value > 10:
+    print("yea its over bro")
+else:
+    print("you only have " + value + "pages of notes!")
