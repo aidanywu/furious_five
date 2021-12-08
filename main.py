@@ -33,7 +33,7 @@ def worldclock():
     }
     response = requests.request("GET", url, headers=headers)
     time = json.loads(response.text)
-    return render_template("worldclock.html", time=time)
+    return render_template("worldclock.html", query=time)
 
 # runs the application on the development server
 if __name__ == "__main__":
