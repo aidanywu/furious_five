@@ -21,7 +21,12 @@ def aboutus():
 
 @app.route("/williamli/")
 def williamli():
-    return render_template("williamli.html")
+    return render_template("about/williamL.html")
+
+
+@app.route("/aidanwu/")
+def aidanwu():
+    return render_template("about/aidanW.html")
 
 
 @app.route("/worldclock/")
