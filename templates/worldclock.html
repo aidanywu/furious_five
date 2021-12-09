@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        html, body{
+            background-image: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80');
+            background-size: 100%;
+        }
+    </style>
 </head>
 <body>
-<p>{{ time["currentDateTime"] }}</p>
+<h1 style="text-align: center; color:white"><b>{{ query["currentDateTime"][0:10] }}<br>{{ query["currentDateTime"][11:16] }}</b></h1>
 </body>
 </html>
