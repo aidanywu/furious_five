@@ -1,0 +1,54 @@
+{% set project = "Soren's Page" %}
+
+{% block body %}
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<body style="background-color:#74d36b;">
+<style>
+  .arrow {
+    margin-top: 1rem;
+  }
+  #image {
+    margin-top: .5rem;
+  }
+</style>
+
+<script>
+    var darkenButton = function(id) {
+      document.getElementById(id).style.filter = "brightness(82%)";
+    };
+    var lightenButton = function(id) {
+      document.getElementById(id).style.filter = "brightness(100%)";
+    };
+    var imageNum = 0;
+    changeImage = function() {
+      if (imageNum == 0) {
+        document.getElementById("image").src = "https://user-images.githubusercontent.com/57303754/145642222-11b1abf0-ac72-4043-9453-fdb8a1e60ee7.jpg";
+        imageNum = 1;
+      } else if (imageNum == 1) {
+        document.getElementById("image").src = "https://user-images.githubusercontent.com/57303754/145642209-d37ffa8e-85fd-434d-a6e0-c1b66e9fcbf3.png";
+        imageNum = 0;
+      }
+    };
+</script>
+
+<div class="center-block container" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+  <div class="col-12">
+  <img src="https://user-images.githubusercontent.com/57303754/142748538-78a8d202-a650-4b02-b077-8d027811ab09.png" style="width: 250px" id="sorenZhuang">
+  </div>
+  <div class="col-12">
+    <img src="https://user-images.githubusercontent.com/57303754/145642209-d37ffa8e-85fd-434d-a6e0-c1b66e9fcbf3.png" style="width: 200px" id="image">
+  </div>
+  <div class="col-12">
+    <img src="https://user-images.githubusercontent.com/57303754/100563758-0c5dc880-3274-11eb-8a40-5b5a7215b13c.png" style="width: 30px" class="arrow" id="left" onclick="changeImage()" onmouseover="darkenButton(id)" onmouseout="lightenButton(id)">
+    <img src="https://user-images.githubusercontent.com/57303754/101407815-4d676580-3890-11eb-8da5-7d64a60941ef.png" style="width: 30px" id="right" class="arrow" onclick="changeImage()" onmouseover="darkenButton(id)" onmouseout="lightenButton(id)">
+  </div>
+  <div class="col-12">
+    <p>Hello! I'm Soren and I like drawing, coding, and math.</p>
+    <a href="https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing" target="_blank"><p>CSP trio shared journal</p></a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block background %}
+{% endblock %}
