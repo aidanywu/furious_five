@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "layouts/base.html" %}
+<head>
+    {% set Wmask = "/static/assets/vaiwithmask.jpeg" %}
+    {% set Nmask = "/static/assets/vainomask.jpeg" %}
+    <meta charset="UTF-8">
+    <title>Vaishavi's About Me Page</title>
+    <style>
+        div {text-align: center; vertical-align: center}
+    </style>
+    <script>
+        function changeMask() {
+            const image = document.getElementById('pic');
+            if (image.src.match("{{ Wmask }}")) {
+                image.src = "{{ Nmask }}";
+            } else {
+                image.src = "{{ Wmask }}";
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <td><img onclick="changeMask()" class="img-responsive py-3" id="pic" src="{{ Wmask }}" width="500" height="Auto">
+    </td>
+</div>
+</body>
+</html>

@@ -29,6 +29,11 @@ def aidanwu():
     return render_template("about/aidanW.html")
 
 
+@app.route("/vaishavijay/")
+def vaishavijay():
+    return render_template("about/vaishavijay.html")
+
+
 @app.route("/worldclock/")
 def worldclock():
     url = "https://world-clock.p.rapidapi.com/json/pst/now"
