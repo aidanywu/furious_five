@@ -2,8 +2,9 @@
 from flask import Flask, render_template
 import requests
 import json
-#test
-#another test
+
+# test
+# another test
 # create a Flask instance
 app = Flask(__name__)
 
@@ -21,24 +22,11 @@ def aboutus():
 
 @app.route("/williamli/")
 def williamli():
-    return render_template("about/williamL.html")
+    return render_template("about/williamli.html")
 
 
 @app.route("/aidanwu/")
 def aidanwu():
-    return render_template("about/aidanW.html")
-
-@app.route("/williamwu/")
-def williamwu():
-    return render_template("about/williamwu.html")
-
-@app.route("/vaishavijay/")
-def vaishavijay():
-    return render_template("about/vaishavijay.html")
-
-
-@app.route("/worldclock/")
-def worldclock():
     url = "https://world-clock.p.rapidapi.com/json/pst/now"
     headers = {
         'x-rapidapi-host': "world-clock.p.rapidapi.com",
@@ -46,7 +34,18 @@ def worldclock():
     }
     response = requests.request("GET", url, headers=headers)
     time = json.loads(response.text)
-    return render_template("worldclock.html", query=time)
+    return render_template("about/aidanwu.html", query=time)
+
+
+@app.route("/williamwu/")
+def williamwu():
+    return render_template("about/williamwu.html")
+
+
+@app.route("/vaishavijay/")
+def vaishavijay():
+    return render_template("about/vaishavijay.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":

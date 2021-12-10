@@ -8,6 +8,16 @@
     <title>Aidan Wu's great About Page</title>
     <style>
         div {text-align: center; vertical-align: center}
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
     </style>
     <script>
         function changeMask() {
@@ -23,8 +33,16 @@
 <body>
 <h1><b>Aidan Wu</b></h1>
 <div>
+    <h2>
+        Hi guys, I'm the github admin of Furious Five<br>
+        I'm currently a sophomore who is taking AP Computer Science Principles<br>
+        very interesting i know<br>
+    </h2>
     <td><img onclick="changeMask()" class="img-responsive py-3" id="pic" src="{{ MASK }}" width="500" height="Auto">
+        <p>Click image to toggle between mask and no mask</p>
     </td>
+    <h3 style="text-align: center; color:white"><b>Date: {{ query["currentDateTime"][0:10] }}<br>Time: {{ query["currentDateTime"][11:16] }}:{{ query["currentFileTime"] / 10000000 % 60}}</b></h3>
+    <button onClick="window.location.reload();">Click to update time</button>
 </div>
 </body>
 </html>
