@@ -28,6 +28,9 @@ def williamli():
 def aidanwu():
     return render_template("about/aidanW.html")
 
+@app.route("/williamwu/")
+def williamwu():
+    return render_template("about/williamwu.html")
 
 @app.route("/vaishavijay/")
 def vaishavijay():
