@@ -8,6 +8,90 @@
     <title>William's About Page</title>
     <style>
         div {text-align: center; vertical-align: center}
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+        div {text-align: center; vertical-align: center}
+
+        *, *::after, *::before {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #32323c;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 41vh;
+            width: 100vw;
+            text-align: center;
+        }
+
+        button {
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+        }
+
+        button {
+            position: relative;
+            border: none;
+            font-size: 18px;
+            transition: color 0.5s, transform 0.2s, background-color 0.2s;
+            outline: none;
+            border-radius: 3px;
+            margin: 0 10px;
+            padding: 23px 33px;
+            border: 3px solid transparent;
+        }
+        button:active {
+            transform: translateY(3px);
+        }
+        button::after, button::before {
+            border-radius: 3px;
+        }
+
+        .shrink-border {
+            background-color: transparent;
+            color: #1b1b20;
+        }
+        .shrink-border:hover {
+            background-color: transparent;
+            box-shadow: none;
+            color: #e6e6e6;
+        }
+        .shrink-border::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #1b1b20;
+            transition: opacity 0.3s, border 0.3s;
+        }
+        .shrink-border:hover::before {
+            opacity: 0;
+        }
+        .shrink-border::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: 3px solid #e6e6e6;
+            opacity: 0;
+            z-index: -1;
+            transform: scaleX(1.1) scaleY(1.3);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .shrink-border:hover::after {
+            opacity: 1;
+            transform: scaleX(1) scaleY(1);
+        }
     </style>
     <script>
         function changeMask() {
@@ -31,6 +115,12 @@
     <b>My name is William Wu, and I am the design manager for Furious Five. <br>
         I enjoy coding and cybersecurity. <br>
         In addition, I like playing video games and eating. <br> </b>
+    <h3 style="text-align: center; color:white"><b>Date: {{ query["currentDateTime"][0:10] }}<br>Time: {{ query["currentDateTime"][11:16] }}:{{ query["currentFileTime"] / 10000000 % 60}}</b></h3>
+    <div class="container">
+        <div>
+            <button class="shrink-border" onClick="window.location.reload();">Click to update time</button>
+        </div>
+    </div>
 </h2>
 </body>
 </html>

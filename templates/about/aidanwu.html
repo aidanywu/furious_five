@@ -13,11 +13,11 @@
 
         *, *::after, *::before {
             box-sizing: border-box;
-        }
+         }
 
         body {
             background-color: #32323c;
-        }
+         }
 
         .container {
             display: flex;
@@ -26,12 +26,12 @@
             height: 41vh;
             width: 100vw;
             text-align: center;
-        }
+         }
 
         button {
             font-family: "Montserrat", sans-serif;
             text-transform: uppercase;
-        }
+         }
 
         button {
             position: relative;
@@ -43,66 +43,24 @@
             margin: 0 10px;
             padding: 23px 33px;
             border: 3px solid transparent;
-        }
+         }
         button:active {
             transform: translateY(3px);
-        }
+         }
         button::after, button::before {
             border-radius: 3px;
-        }
+         }
 
-        .shrink-border {
-            background-color: transparent;
-            color: #1b1b20;
-        }
-        .shrink-border:hover {
-            background-color: transparent;
-            box-shadow: none;
-            color: #e6e6e6;
-        }
-        .shrink-border::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 3px solid #1b1b20;
-            transition: opacity 0.3s, border 0.3s;
-        }
-        .shrink-border:hover::before {
-            opacity: 0;
-        }
-        .shrink-border::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            border: 3px solid #e6e6e6;
-            opacity: 0;
-            z-index: -1;
-            transform: scaleX(1.1) scaleY(1.3);
-            transition: transform 0.3s, opacity 0.3s;
-        }
-        .shrink-border:hover::after {
-            opacity: 1;
-            transform: scaleX(1) scaleY(1);
-        }
-
-        {#.material-bubble {#}
+        {#.shrink-border {#}
         {#    background-color: transparent;#}
         {#    color: #1b1b20;#}
-        {#    border: none;#}
-        {#    overflow: hidden;#}
-        {#    box-shadow: none;#}
         {# }#}
-        {#.material-bubble:hover {#}
+        {#.shrink-border:hover {#}
+        {#    background-color: transparent;#}
+        {#    box-shadow: none;#}
         {#    color: #e6e6e6;#}
         {# }#}
-        {#.material-bubble::before {#}
+        {#.shrink-border::before {#}
         {#    content: "";#}
         {#    position: absolute;#}
         {#    top: 0;#}
@@ -112,29 +70,71 @@
         {#    border: 3px solid #1b1b20;#}
         {#    transition: opacity 0.3s, border 0.3s;#}
         {# }#}
-        {#.material-bubble:hover::before {#}
+        {#.shrink-border:hover::before {#}
         {#    opacity: 0;#}
         {# }#}
-        {#.material-bubble::after {#}
+        {#.shrink-border::after {#}
         {#    content: "";#}
         {#    position: absolute;#}
         {#    top: 0;#}
         {#    left: 0;#}
-        {#    width: 200px;#}
-        {#    height: 200px;#}
-        {#    background-color: #494958;#}
-        {#    border-color: transparent;#}
-        {#    border-radius: 50%;#}
-        {#    transform: translate(-10px, -70px) scale(0.1);#}
+        {#    width: 100%;#}
+        {#    height: 100%;#}
+        {#    background-color: transparent;#}
+        {#    border: 3px solid #e6e6e6;#}
         {#    opacity: 0;#}
         {#    z-index: -1;#}
-        {#    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;#}
+        {#    transform: scaleX(1.1) scaleY(1.3);#}
+        {#    transition: transform 0.3s, opacity 0.3s;#}
         {# }#}
-        {#.material-bubble:hover::after {#}
+        {#.shrink-border:hover::after {#}
         {#    opacity: 1;#}
-        {#    transform-origin: 100px 100px;#}
-        {#    transform: scale(1) translate(-10px, -70px);#}
+        {#    transform: scaleX(1) scaleY(1);#}
         {# }#}
+
+        .material-bubble {
+            background-color: transparent;
+            color: #1b1b20;
+            border: none;
+            overflow: hidden;
+            box-shadow: none;
+         }
+        .material-bubble:hover {
+            color: #e6e6e6;
+         }
+        .material-bubble::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #1b1b20;
+            transition: opacity 0.3s, border 0.3s;
+         }
+        .material-bubble:hover::before {
+            opacity: 0;
+         }
+        .material-bubble::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: #494958;
+            border-color: transparent;
+            border-radius: 50%;
+            transform: translate(-10px, -70px) scale(0.1);
+            opacity: 0;
+            z-index: -1;
+            transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+         }
+        .material-bubble:hover::after {
+            opacity: 1;
+            transform-origin: 100px 100px;
+            transform: scale(1) translate(-10px, -70px);
+         }
     </style>
     <script>
         function changeMask() {
@@ -158,20 +158,14 @@
     <td><img onclick="changeMask()" class="img-responsive py-3" id="pic" src="{{ MASK }}" width="500" height="Auto">
         <p>Click image to toggle between mask and no mask</p>
     </td>
-    <h3 style="text-align: center; color:white"><b>Date: {{ query["currentDateTime"][0:10] }}<br>Time: {{ query["currentDateTime"][11:16] }}:{{ query["currentFileTime"] / 10000000 % 60}}</b></h3>
-</div>
-<div class="container">
-    <div>
-        <button class="shrink-border" onClick="window.location.reload();">Click to update time</button>
     </div>
-</div>
 <div class="contact" style="height: 35vh;">
     <div class="row justify-content-left" style="margin: 2%;">
         <div class="col-12">
             <form action="" id="word" method="POST" >
                 <label for="word">Need to define a word?</label>
                 <input name="word" id="word1">
-                <input type="submit" value="Define!">
+                <button class="material-bubble" type="submit">Define!</button>
             </form>
         </div>
         <div class="col-12">
