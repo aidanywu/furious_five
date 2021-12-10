@@ -46,9 +46,17 @@ def williamwu():
 def vaishavijay():
     return render_template("about/vaishavijay.html")
 
+
 @app.route("/soren/")
 def soren():
     return render_template("about/soren.html")
+
+
+@app.route("/foff/")
+def foff():
+    link = "https://rapidapi.com/community/api/foaas/"
+    return render_template("about/easteregg.html")
+
 
 @app.route('/gamesapi/', methods=['GET', 'POST'])
 def gamesapi():
