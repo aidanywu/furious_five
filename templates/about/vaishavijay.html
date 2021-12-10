@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include "layouts/base.html" %}
+<script>
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/classify?locale=en_us",
+        "method": "POST",
+        "headers": {
+            "content-type": "application/json",
+            "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+            "x-rapidapi-key": "7892772123msh9dd09d6221bf955p13f075jsn7b4a66a1dc30"
+        },
+        "processData": false,
+        "data": {
+            "plu_code": "",
+            "title": "Kroger Vitamin A & D Reduced Fat 2% Milk",
+            "upc": ""
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+</script>
 <head>
     {% set Wmask = "/static/assets/vaiwithmask.jpeg" %}
     {% set Nmask = "/static/assets/vainomask.jpeg" %}
@@ -26,6 +49,7 @@
 <div>
     <td><img onclick="changeMask()" class="img-responsive py-3" id="pic" src="{{ Wmask }}" width="500" height="Auto">
     </td>
+    <a href="https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing" target="_blank"><p>CSP Trio shared journal</p></a>
 </div>
 </body>
 </html>
