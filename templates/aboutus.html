@@ -21,5 +21,24 @@
 
 <p>fffffff</p>
 
+<p>
+    <img alt="" src="/static/assets/William Wu.png"
+         style="height: 200px; width: 300px" id="imgClickAndChange" onclick="changeImage()"  />
+</p>
+
+<script language="javascript">
+    function changeImage() {
+
+        if (document.getElementById("imgClickAndChange").src == "/static/assets/William Wu.png")
+        {
+            document.getElementById("imgClickAndChange").src = "/static/assets/William Wu_mask.jpg";
+        }
+        else
+        {
+            document.getElementById("imgClickAndChange").src = "/static/assets/William Wu.png";
+        }
+    }
+</script>
+
 </body>
 </html>

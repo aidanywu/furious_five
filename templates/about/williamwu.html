@@ -2,10 +2,10 @@
 <html lang="en">
 {% include "layouts/base.html" %}
 <head>
-    {% set MASK = "/static/assets/William Wu_mask;0.PNG" %}
-    {% set NOMASK = "/static/assets/William Wu;0.png" %}
+    {% set MASK = "/static/assets/William Wu_mask.PNG" %}
+    {% set NOMASK = "/static/assets/William Wu_nomask.PNG" %}
     <meta charset="UTF-8">
-    <title>William Wu About Page</title>
+    <title>William's About Page</title>
     <style>
         div {text-align: center; vertical-align: center}
     </style>
@@ -21,6 +21,7 @@
     </script>
 </head>
 <body>
+<h1><b>William Wu</b></h1>
 <div>
     <td><img onclick="changeMask()" class="img-responsive py-3" id="pic" src="{{ MASK }}" width="500" height="Auto">
     </td>
