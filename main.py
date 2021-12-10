@@ -46,6 +46,10 @@ def williamwu():
 def vaishavijay():
     return render_template("about/vaishavijay.html")
 
+@app.route("/soren/")
+def soren():
+    return render_template("about/soren.html")
+
 @app.route('/gamesapi/', methods=['GET', 'POST'])
 def gamesapi():
     url = "https://free-to-play-games-database.p.rapidapi.com/api/games"
