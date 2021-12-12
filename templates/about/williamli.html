@@ -2,26 +2,73 @@
 <html lang="en">
 {% include "layouts/base.html" %}
 <head>
+<style>
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+    </style>
     <meta charset="UTF-8">
     <title>UH OH SISTERS</title>
     <link rel="stylesheet" href="../../static/css/css2.css">
     {%block head%}
         <script>
             function changeMask() {
-                const image = document.getElementById('pic');
-                if (image.src.match("/static/assets/WLm.jpg")) {
-                    image.src = "/static/assets/WLnm.jpg";
+                if (document.getElementById("maskpic").hasAttribute("hidden")) {
+                    document.getElementById("maskpic").removeAttribute("hidden")
+                    document.getElementById("nomaskpic").setAttribute("hidden", "")
                 } else {
-                    image.src = "/static/assets/WLm.jpg";
+                    document.getElementById("maskpic").setAttribute("hidden", "")
+                    document.getElementById("nomaskpic").removeAttribute("hidden")
                 }
             }
         </script>
     {%endblock%}
 </head>
 <body>
-<h1>h1</h1>
-<p style="color: black">williams test page stuff</p>
-<img style="height: 400px; width: auto" id="pic" src="/static/assets/WLm.jpg" onclick="changeMask()">
-<a href="https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing"> Journal </a>
+<h1>William Li</h1>
+<img class="center" style="height: 300px; width: auto;" id="maskpic" src="/static/assets/WLm.jpg" onclick="changeMask()">
+<img class="center" hidden style="height: 300px; width: auto;" id="nomaskpic" src="/static/assets/WLnm.jpg" onclick="changeMask()">
+<div class="center"><a style="color: #4f00ff;" href="https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing">Journal</a></div>
+<script>
+
+    var getData = fetch('pro.openweathermap.org/data/2.5/forecast/hourly?q=London,us&mode=json&appid=a10a3906383fc3327584d149ee95865c')
+        .then(function(response) {
+            return response.json();
+        })
+    .then(function(jsonObject) {
+        alert(jsonObject);
+    });
+</script>
+<button class="center" onclick="getData" style="height: 30px; width: 120px"> GET DATA!! </button>
+ <p id="data">
+
+ </p>
+
+
+<button class="center" style="width: 150px; height: 40px" onclick="getLocation()">Get Coordinates</button>
+
+<p style="font-size: xxx-large" id="demo"></p>
+
+<script>
+    const x = document.getElementById("demo");
+
+    function getLocation() {
+        try {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } catch {
+            x.innerHTML = "err";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+
+
 </body>
 </html>
