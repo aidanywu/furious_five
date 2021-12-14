@@ -11,9 +11,8 @@ app = Flask(__name__)
 
 # connects default URL to render index.html
 @app.route("/")
-def index():
-    return render_template("index.html")
-
+def home():
+    return render_template("home.html")
 
 @app.route("/aboutus/")
 def aboutus():
@@ -70,6 +69,11 @@ def soren():
 def foff():
     link = "https://rapidapi.com/community/api/foaas/"
     return render_template("about/easteregg.html")
+
+
+@app.route("/cafe/")
+def cafe():
+    return render_template("studyrooms/cafe.html")
 
 
 # runs the application on the development server
