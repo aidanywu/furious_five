@@ -65,6 +65,11 @@ def soren():
     return render_template("about/soren.html")
 
 
+@app.route("/timer/")
+def timer():
+    return render_template("timer.html")
+
+
 @app.route("/foff/")
 def foff():
     link = "https://rapidapi.com/community/api/foaas/"
