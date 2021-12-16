@@ -3,42 +3,106 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>POMOODORO TIMEr</title>
+    <title>TOMATO TIMER</title>
     <!-- Display the countdown timer in an element -->
 
 
     <script>
-        // Set the date we're counting down to
-        let countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+        let DEEZnuts = 0;
+        function timer(time) {
 
-        // Update the count down every 1 second
-        let x = setInterval(function() {
 
-            // Get today's date and time
-            let now = new Date().getTime();
+            let SISTERS = 0;
 
-            // Find the distance between now and the count down date
-            let distance = countDownDate - now;
+            let rn = new Date().getTime();
 
-            // Time calculations for days, hours, minutes and seconds
-            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Set the date we're counting down to !!MAKE SURE TO ADD BACK THE 60*!! it is only gone for testing purposes
+            let countDownDate = new Date(rn + 60*1000*time).getTime();
 
-            // Display the result in the element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
+            // Update the count down every 1 second
+            let x = setInterval(function () {
 
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
+                // Get today's date and time
+                let now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                let distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                let yourMOM = Math.floor(distance % 1000)
+
+                // Display the result in the element with id="demo"
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "." + yourMOM + " s   " ;
+
+                if(DEEZnuts==0){
+                SISTERS = 25
+                }
+                if(DEEZnuts==1){
+                SISTERS = 5
+                }
+                if(DEEZnuts==2){
+                    SISTERS = 25
+                }
+                if(DEEZnuts==3){
+                    SISTERS = 5
+                }
+                if(DEEZnuts==4){
+                    SISTERS = 25;
+                }
+                if(DEEZnuts==5){
+                    SISTERS = 5;
+                }
+                if(DEEZnuts==6){
+                    SISTERS = 25;
+                }
+                if(DEEZnuts==7){
+                    SISTERS = 30;
+
+                }
+
+                // If the count down is finished, write some text
+                if (distance <= 0) {
+                    document.getElementById("debuginfo").innerHTML = "Timer ID (DEEZnuts): " +
+                        DEEZnuts + " Timer countdown time (SISTERS): " + SISTERS;
+                    DEEZnuts = DEEZnuts + 1;
+
+                    clearInterval(x);
+                    timer(SISTERS);
+
+
+                    if(SISTERS == 5 || SISTERS == 30){
+                        document.getElementById('display').innerText = "ITS TIME FOR A BREAK SISTERS!!"
+                        document.getElementById('1').removeAttribute("hidden")
+                        if (SISTERS==30){
+                            DEEZnuts = 0;
+                        }
+                    }
+                    if(SISTERS == 25){
+                        document.getElementById('display').innerText= "GET TO WORRKKKK"
+                        document.getElementById('1').setAttribute("hidden", "")
+                    }
+                }
+
+            }, 1);
+
+        }
+         if(document.getElementById('toggleDebugInfo').checked == true)
+            document.getElementById('debuginfo').removeAttribute("hidden")
+         if(document.getElementById('toggleDebugInfo').checked == false)
+            document.getElementById('debuginfo').setAttribute("hidden", "")
     </script>
 </head>
 <body>
-<p id="demo"></p>
+<button style="width: 100px; height: 30px" onclick="timer(0)">BEGIN!!!!!</button>
+<input type="checkbox" id="toggleDebugInfo" value="displayDebugInfo">Show Debug Information?
+<h2 id="demo"></h2>
+<p hidden id="debuginfo"></p>
+<p id="display"></p>
+<img src="/static/assets/BREAKTIME.png" hidden id="1">
 </body>
 </html>
