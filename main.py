@@ -108,7 +108,7 @@ def rockerpaperscissors():
 
 @app.route("/darkmode/")
 def darkmode():
-    return render_template("rooms/darkmode.html")
+    return render_template("darkmode.html")
 
 
 # runs the application on the development server
