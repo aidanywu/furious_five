@@ -95,6 +95,12 @@ def notebook2():
 def notebook3():
     return render_template("notebooks/notebook3.html")
 
+
+@app.route("/tictactoe/")
+def tictactoe():
+    return render_template("minigames/tictactoe.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
