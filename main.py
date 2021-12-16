@@ -2,9 +2,6 @@
 from flask import Flask, render_template, request
 import requests
 import json
-
-# test
-# another test
 # create a Flask instance
 app = Flask(__name__)
 
