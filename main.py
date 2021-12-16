@@ -1,13 +1,12 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-import requests
+
 import json
 
 # test
 # another test
 # create a Flask instance
 app = Flask(__name__)
-
 
 # connects default URL to render index.html
 @app.route("/")
@@ -69,7 +68,6 @@ def soren():
 def timer():
     return render_template("timer.html")
 
-
 @app.route("/foff/")
 def foff():
     link = "https://rapidapi.com/community/api/foaas/"
@@ -94,6 +92,14 @@ def notebook2():
 @app.route("/notebook3/")
 def notebook3():
     return render_template("notebooks/notebook3.html")
+
+@app.route("/crud/")
+def crud():
+    return render_template("database/crud.html")
+
+@app.route("/search/")
+def search():
+    return render_template("database/search.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
