@@ -1,4 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link rel="stylesheet" href="css/darkmode.scss">
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous" ></script>
 <style>
@@ -68,6 +69,19 @@
   </tr>
 </table>
 </h2>
+<div class=""container">
+<h1>Light/Dark Mode</h1>
+<div class="toggle-container">
+  <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+</div>
+<p>lorem chsbjhdn</p>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
 </body>
 {% block content %}
 {% endblock %}
