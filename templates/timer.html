@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% include "layouts/base.html" %}
 <head>
 
     <meta charset="UTF-8">
@@ -100,7 +101,7 @@
 <body>
 <button style="width: 100px; height: 30px" onclick="timer(0)">BEGIN!!!!!</button>
 <input type="checkbox" id="toggleDebugInfo" value="displayDebugInfo">Show Debug Information?
-<h2 id="demo"></h2>
+<h1 id="demo"></h1>
 <p hidden id="debuginfo"></p>
 <p id="display"></p>
 <img src="/static/assets/BREAKTIME.png" hidden id="1">
