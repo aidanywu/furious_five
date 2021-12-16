@@ -95,6 +95,22 @@ def notebook2():
 def notebook3():
     return render_template("notebooks/notebook3.html")
 
+
+@app.route("/tictactoe/")
+def tictactoe():
+    return render_template("minigames/tictactoe.html")
+
+
+@app.route("/rockpaperscissors/")
+def rockerpaperscissors():
+    return render_template("minigames/rockpaperscissors.html")
+
+
+@app.route("/darkmode/")
+def darkmode():
+    return render_template("rooms/darkmode.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
