@@ -26,6 +26,15 @@
 #### · ([Week 2:]) Home Pages
 #### · ([Week 3:]) WIP Project Review
 
+## Week 3 - WIP Project Review
+| Name | Evidence | Grade |
+| ---  | ---      | ---   |
+| Vaishavi Jayashankar | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
+| Soren Zhuang | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
+| Aidan Wu | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
+| William Wu | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
+| William Li | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
+
 ## Pair Share Journals <a id="journals" name="journals"></a>
 #### [Link to Aidan W and William W’s Journal](https://docs.google.com/document/d/1Byg2xdhazwebff4lFHdSSj-k-xkj035d9EHa7PSV_1A/edit?usp=sharing)
 #### [Link to Soren Z, William L, and Vaishavi J’s Journal](https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing)
