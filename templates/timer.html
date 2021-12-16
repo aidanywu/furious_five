@@ -2,7 +2,17 @@
 <html lang="en">
 {% include "layouts/base.html" %}
 <head>
-
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>TOMATO TIMER</title>
     <!-- Display the countdown timer in an element -->
@@ -99,7 +109,9 @@
     </script>
 </head>
 <body>
-<button style="width: 100px; height: 30px" onclick="timer(0)">BEGIN!!!!!</button>
+<a class="center" onclick="timer(0)" onclick=document.getElementById('2').setAttribute("hidden","")>
+    <img class="center" id="2" style="width: 200px; height: auto" src="/static/assets/POMODORO.png">
+</a>
 <input type="checkbox" id="toggleDebugInfo" value="displayDebugInfo">Show Debug Information?
 <h1 id="demo"></h1>
 <p hidden id="debuginfo"></p>
