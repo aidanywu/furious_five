@@ -118,9 +118,16 @@ def sleepingsimulator():
 def darkmode():
     return render_template("darkmode.html")
 
+
 @app.route("/feedback/")
 def feedback():
     return render_template("feedback.html")
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 
 # runs the application on the development server
 if __name__ == "__main__":
