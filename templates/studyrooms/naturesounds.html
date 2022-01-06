@@ -71,7 +71,7 @@
         <div class="col-12">
             <form action="" id="getspotify" method="POST" >
                 <label style="color: white" for="spotify">Play your own spotify playlist</label>
-                <input name="spotify" id="spotify">
+                <input name="spotify" id="spotify" onfocus="if (this.value == 'enter Spotify playlist link') {this.value = '';}" onblur="if (this.value == '') {this.value = 'enter Spotify playlist link';}">
                 <input style="color: white" type="submit" value="Play">
             </form>
         </div>
