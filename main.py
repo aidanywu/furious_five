@@ -141,12 +141,3 @@ def page_not_found(e):
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
-
-finalpage = 586
-initialpage = 571
-
-value = finalpage - initialpage + 1
-if value > 10:
-    print("yea its over bro")
-else:
-    print("you only have " + value + "pages of notes!")
