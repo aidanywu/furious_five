@@ -104,6 +104,11 @@ def rockerpaperscissors():
     return render_template("minigames/rockpaperscissors.html")
 
 
+@app.route("/sleepingsimulator/")
+def sleepingsimulator():
+    return render_template("minigames/sleepingsimulator.html")
+
+
 @app.route("/darkmode/")
 def darkmode():
     return render_template("darkmode.html")
