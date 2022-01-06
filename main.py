@@ -108,6 +108,9 @@ def rockerpaperscissors():
 def darkmode():
     return render_template("darkmode.html")
 
+@app.route("/feedback/")
+def feedback():
+    return render_template("feedback.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
