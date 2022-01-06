@@ -84,6 +84,15 @@ def cafe():
     return render_template("studyrooms/cafe.html")
 
 
+@app.route("/naturesounds/")
+def naturesounds():
+    if request.form:
+        spotify = request.form.get("spotify")
+        if len(name) != 0:  # input field has content
+            return render_template("studyrooms,naturesounds.html", spotify=spotify)
+    return render_template("studyrooms/naturesounds.html", spotify='https://open.spotify.com/artist/4NqS7DbPFYwZmniGHCPMpm?utm_source=generator&theme=0')
+
+
 @app.route("/notebook1/")
 def notebook1():
     return render_template("notebooks/notebook1.html")
