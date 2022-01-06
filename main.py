@@ -68,6 +68,11 @@ def timer():
     return render_template("timer.html")
 
 
+@app.route("/wCalendar/")
+def wCalendar():
+    return render_template("notebooks/weekly calendar.html")
+
+
 @app.route("/foff/")
 def foff():
     link = "https://rapidapi.com/community/api/foaas/"
