@@ -84,6 +84,15 @@ def cafe():
     return render_template("studyrooms/cafe.html")
 
 
+@app.route("/naturesounds/")
+def naturesounds():
+    if request.form:
+        spotify = request.form.get("spotify")
+        if len(name) != 0:  # input field has content
+            return render_template("studyrooms,naturesounds.html", spotify=spotify)
+    return render_template("studyrooms/naturesounds.html", spotify='https://open.spotify.com/artist/4NqS7DbPFYwZmniGHCPMpm?utm_source=generator&theme=0')
+
+
 @app.route("/notebook1/")
 def notebook1():
     return render_template("notebooks/notebook1.html")
@@ -132,12 +141,3 @@ def page_not_found(e):
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
-
-finalpage = 586
-initialpage = 571
-
-value = finalpage - initialpage + 1
-if value > 10:
-    print("yea its over bro")
-else:
-    print("you only have " + value + "pages of notes!")
