@@ -4,12 +4,28 @@
 <head>
 <style>
     .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
-    </style>
+     table, th, td {
+         border: 1px solid black;
+         border-collapse: collapse;
+         margin-left: auto;
+         margin-right: auto;
+
+     }
+    th{
+        background-color: #b8b5e0;
+        text-align: center;
+        padding: 10px
+    }
+    th, td{
+        padding: 2px
+    }
+
+</style>
     <meta charset="UTF-8">
     <title>UH OH SISTERS</title>
     <link rel="stylesheet" href="../../static/css/css2.css">
@@ -33,16 +49,47 @@
 <img class="center" hidden style="height: 300px; width: auto;" id="nomaskpic" src="/static/assets/WLnm.jpg" onclick="changeMask()">
 <div class="center"><a style="color: #4f00ff;" href="https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing">Journal</a></div>
 <script>
+    const api_url = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.01419941320743&lon=-117.12187586377235&units=metric&appid=a10a3906383fc3327584d149ee95865c'
+    async function OpenWeather() {
+        const response = await fetch(api_url)
+        const data = await response.json();
+        console.log(data.daily[0].temp.max);
+        document.getElementById('day1max').innerText = data.daily[0].temp.max
+        document.getElementById('day2max').innerText = data.daily[1].temp.max
+        document.getElementById('day3max').innerText = data.daily[2].temp.max
+        document.getElementById('day4max').innerText = data.daily[3].temp.max
+        document.getElementById('day5max').innerText = data.daily[4].temp.max
+        document.getElementById('day6max').innerText = data.daily[5].temp.max
+        document.getElementById('day7max').innerText = data.daily[6].temp.max
 
-    var getData = fetch('pro.openweathermap.org/data/2.5/forecast/hourly?q=London,us&mode=json&appid=a10a3906383fc3327584d149ee95865c')
-        .then(function(response) {
-            return response.json();
-        })
-    .then(function(jsonObject) {
-        alert(jsonObject);
-    });
+        document.getElementById('day1min').innerText = data.daily[0].temp.min
+        document.getElementById('day2min').innerText = data.daily[1].temp.min
+        document.getElementById('day3min').innerText = data.daily[2].temp.min
+        document.getElementById('day4min').innerText = data.daily[3].temp.min
+        document.getElementById('day5min').innerText = data.daily[4].temp.min
+        document.getElementById('day6min').innerText = data.daily[5].temp.min
+        document.getElementById('day7min').innerText = data.daily[6].temp.min
+
+        document.getElementById('day1morn').innerText = data.daily[0].temp.morn
+        document.getElementById('day2morn').innerText = data.daily[1].temp.morn
+        document.getElementById('day3morn').innerText = data.daily[2].temp.morn
+        document.getElementById('day4morn').innerText = data.daily[3].temp.morn
+        document.getElementById('day5morn').innerText = data.daily[4].temp.morn
+        document.getElementById('day6morn').innerText = data.daily[5].temp.morn
+        document.getElementById('day7morn').innerText = data.daily[6].temp.morn
+
+        document.getElementById('day1eve').innerText = data.daily[0].temp.eve
+        document.getElementById('day2eve').innerText = data.daily[1].temp.eve
+        document.getElementById('day3eve').innerText = data.daily[2].temp.eve
+        document.getElementById('day4eve').innerText = data.daily[3].temp.eve
+        document.getElementById('day5eve').innerText = data.daily[4].temp.eve
+        document.getElementById('day6eve').innerText = data.daily[5].temp.eve
+        document.getElementById('day7eve').innerText = data.daily[6].temp.eve
+    }
+
+    OpenWeather();
 </script>
-<button class="center" onclick="getData" style="height: 30px; width: 120px"> GET DATA!! </button>
+<button class="center" onclick="OpenWeather()" style="height: 30px; width: 120px"> GET DATA!! </button>
  <p id="data">
 
  </p>
@@ -69,6 +116,26 @@
     }
 </script>
 
+<table>
+    <tr>
+        <th>Today</th>
+        <th>Tomorrow</th>
+        <th>The day after tomorrow</th>
+        <th>The day after the day after tomorrow</th>
+        <th>the day after the day after the day after tomorrow</th>
+        <th>the day after the day after the day after the day after tomorrow</th>
+        <th>the day after the day after the day after the day after the day after tomorrow</th>
+    </tr>
+    <tr>
+        <td>Max:<span id="day1max"></span> ℃<br>Min:<span id="day1min"></span> ℃<br>Morning:<span id="day1morn"></span> ℃<br>Evening:<span id="day1eve"></span> ℃</td>
+        <td>Max:<span id="day2max"></span> ℃<br>Min:<span id="day2min"></span> ℃<br>Morning:<span id="day2morn"></span> ℃<br>Evening:<span id="day2eve"></span> ℃</td>
+        <td>Max:<span id="day3max"></span> ℃<br>Min:<span id="day3min"></span> ℃<br>Morning:<span id="day3morn"></span> ℃<br>Evening:<span id="day3eve"></span> ℃</td>
+        <td>Max:<span id="day4max"></span> ℃<br>Min:<span id="day4min"></span> ℃<br>Morning:<span id="day4morn"></span> ℃<br>Evening:<span id="day4eve"></span> ℃</td>
+        <td>Max:<span id="day5max"></span> ℃<br>Min:<span id="day5min"></span> ℃<br>Morning:<span id="day5morn"></span> ℃<br>Evening:<span id="day5eve"></span> ℃</td>
+        <td>Max:<span id="day6max"></span> ℃<br>Min:<span id="day6min"></span> ℃<br>Morning:<span id="day6morn"></span> ℃<br>Evening:<span id="day6eve"></span> ℃</td>
+        <td>Max:<span id="day7max"></span> ℃<br>Min:<span id="day7min"></span> ℃<br>Morning:<span id="day7morn"></span> ℃<br>Evening:<span id="day7eve"></span> ℃</td>
+    </tr>
+</table>
 
 </body>
 </html>
