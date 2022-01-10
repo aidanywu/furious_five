@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request
 import requests
 import json
-#test
+# test
 # create a Flask instance
 app = Flask(__name__)
 
@@ -11,6 +11,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("home.html")
+
 
 @app.route("/aboutus/")
 def aboutus():
@@ -22,11 +23,11 @@ def williamli():
     return render_template("about/williamli.html")
 
 
-@app.route("/aidanwu/", methods=['GET','POST'])
+@app.route("/aidanwu/", methods=['GET', 'POST'])
 def aidanwu():
     # dictionary api
     url1 = "https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary"
-    querystring1 = {"word":"word"}
+    querystring1 = {"word": "word"}
     if request.form:
         word = request.form.get("word")
         if len(word) != 0:  # input field has content
@@ -138,6 +139,27 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
+@app.route("/subjectsearch/")
+def subjectsearch():
+    return render_template("subjectsearch.html")
+
+
+@app.route("/subjects/")
+def subjects():
+    return render_template("subjects.html")
+
+
+@app.route("/math/")
+def math():
+    return render_template("subjects/math.html")
+
+
+@app.route("/calculator/")
+def calculator():
+    return render_template("calculator.html")
+
 # runs the application on the development server
+
+
 if __name__ == "__main__":
     app.run(debug=True)
