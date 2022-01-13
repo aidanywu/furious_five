@@ -75,7 +75,17 @@ def wCalendar():
 
 @app.route("/crud_async/")
 def crud_async():
-    return render_template("crud_async.html")
+    return render_template("crud/templates/crud/crud_async.html")
+
+
+@app.route("/crud/")
+def crud():
+    return render_template("crud/templates/crud/crud.html")
+
+
+@app.route("/search/")
+def search():
+    return render_template("crud/templates/crud/search.html")
 
 
 @app.route("/foff/")
