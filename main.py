@@ -73,6 +73,11 @@ def wCalendar():
     return render_template("notebooks/weekly calendar.html")
 
 
+@app.route("/crud_async/")
+def crud_async():
+    return render_template("crud_async.html")
+
+
 @app.route("/foff/")
 def foff():
     link = "https://rapidapi.com/community/api/foaas/"
