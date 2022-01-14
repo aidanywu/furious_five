@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include "layouts/base.html" %}
-
 <style>
     html, body{
         margin: 0px;
@@ -16,57 +15,11 @@
         color: rgba(0, 0, 0, 0.96);
         font-family: Trebuchet;
     }
-    {
-        box-sizing: border-box;
+
+    img:hover {
+        transform: scaleX(-1);
     }
 
-    body {
-        margin: 0;
-        font-family: Arial;
-    }
-
-    .header {
-        text-align: center;
-        padding: 32px;
-    }
-
-    .row {
-        display: -ms-flexbox; /* IE10 */
-        display: flex;
-        -ms-flex-wrap: wrap; /* IE10 */
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
-
-    .column {
-        -ms-flex: 25%; /* IE10 */
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-    }
-
-    .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-    }
-
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 800px) {
-        .column {
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .column {
-            -ms-flex: 100%;
-            flex: 100%;
-            max-width: 100%;
-        }
-    }
 </style>
 <script>
     function api() {
@@ -110,13 +63,13 @@
 </div>
 <div class="row">
     <div class="column">
-        <img src="dog1.jpeg" style="width:100%">
-        <img src="dog2.jpeg" style="width:100%">
-        <img src="dog3.jpeg" style="width:100%">
-        <img src="dog4.jpeg" style="width:100%">
-        <img src="dog5.jpeg" style="width:100%">
-        <img src="dog6.jpeg" style="width:100%">
-        <img src="dog7.jpeg" style="width:100%">
+        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1542062283%2Fchocolate-and-cream-layer-cake-1812-cover.jpg%3Fitok%3DR_xDiShk" style="height:300px">
+        <img src="https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/16714-birthday-cake-600x600.jpg?ext=.jpg" style="height:300px">
+        <img src="https://preppykitchen.com/wp-content/uploads/2019/06/Chocolate-cake-recipe-1200a.jpg" style="height:300px">
+        <img src="https://www.recipetineats.com/wp-content/uploads/2020/08/My-best-Vanilla-Cake_9-SQ.jpg" style="height:300px">
+        <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/4/5/1/IG1C17_30946_s4x3.jpg.rend.hgtvcom.616.462.suffix/1433541424559.jpeg" style="height:300px">
+        <img src="https://static.onecms.io/wp-content/uploads/sites/19/2018/04/04/MyRecipes_032718_1776-2000.jpg" style="height:300px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMdIrhglHeaXu-2ZjNrk9TdFW1HLNXHfYpgg&usqp=CAU" style="height:300px">
     </div>
 <h2>Outside of Comp Sci, I’m an avid musician, most recently being an electric and string bassist and Carnatic vocalist </h2>
 <p id="a"></p>
@@ -130,10 +83,6 @@
 </div>
 </body>
 </html>
-
-
-
-
 <body>
 
 <div id ="map"><div></div>
@@ -152,6 +101,32 @@
     </script>
 <script>asynch; defer
 >src="https://maps.googleapis.com/maps/js?key=AIzaSyBYzXj5wF4L6mChyyc5xwfb2QT1QT1QEZ9VN8&callback=initMap"</script>
+</div>
+</body>
+<style>
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
 </body>
 </div>
 </div>

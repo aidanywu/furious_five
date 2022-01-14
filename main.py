@@ -94,16 +94,6 @@ def naturesounds():
     return render_template("studyrooms/naturesounds.html", spotify='https://open.spotify.com/artist/4NqS7DbPFYwZmniGHCPMpm?utm_source=generator&theme=0')
 
 
-@app.route("/notebook1/")
-def notebook1():
-    return render_template("notebooks/notebook1.html")
-
-
-@app.route("/notebook2/")
-def notebook2():
-    return render_template("notebooks/notebook2.html")
-
-
 @app.route("/notebook3/")
 def notebook3():
     return render_template("notebooks/notebook3.html")
@@ -134,11 +124,6 @@ def feedback():
     return render_template("feedback.html")
 
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html'), 404
-
-
 @app.route("/subjectsearch/")
 def subjectsearch():
     return render_template("subjectsearch.html")
@@ -157,6 +142,21 @@ def math():
 @app.route("/calculator/")
 def calculator():
     return render_template("calculator.html")
+
+
+@app.route("/english/")
+def english():
+    return render_template("english.html")
+
+
+@app.route("/science/")
+def science():
+    return render_template("science.html")
+
+
+@app.route("/fibonacci/")
+def fibonacci():
+    return render_template("fibonacci.html")
 
 # runs the application on the development server
 
