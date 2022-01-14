@@ -1,10 +1,18 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+from templates.about.aboutus import boutus
+from templates.notebooks.notebooks import notebooks
+from templates.studyrooms.studyrooms import studyrooms
+from templates.minigames.minigames import minigames
 import requests
 import json
 # test
 # create a Flask instance
 app = Flask(__name__)
+app.register_blueprint(boutus)
+app.register_blueprint(notebooks)
+app.register_blueprint(studyrooms)
+app.register_blueprint(minigames)
 
 
 # connects default URL to render index.html
