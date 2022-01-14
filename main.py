@@ -102,9 +102,19 @@ def naturesounds():
     return render_template("studyrooms/naturesounds.html", spotify='https://open.spotify.com/artist/4NqS7DbPFYwZmniGHCPMpm?utm_source=generator&theme=0')
 
 
-@app.route("/notebook3/")
+@app.route("/subjects/notebook3/")
 def notebook3():
     return render_template("notebooks/notebook3.html")
+
+
+@app.route("/subjects/notebook1/")
+def notebook1():
+    return render_template("notebooks/notebook1.html")
+
+
+@app.route("/subjects/notebook2/")
+def notebook2():
+    return render_template("notebooks/notebook2.html")
 
 
 @app.route("/tictactoe/")
@@ -132,11 +142,6 @@ def feedback():
     return render_template("feedback.html")
 
 
-@app.route("/subjectsearch/")
-def subjectsearch():
-    return render_template("subjectsearch.html")
-
-
 @app.route("/subjects/")
 def subjects():
     return render_template("subjects.html")
@@ -147,7 +152,7 @@ def math():
     return render_template("subjects/math.html")
 
 
-@app.route("/calculator/")
+@app.route("/subjects/calculator/")
 def calculator():
     return render_template("calculator.html")
 
@@ -162,9 +167,14 @@ def science():
     return render_template("science.html")
 
 
-@app.route("/fibonacci/")
-def fibonacci():
-    return render_template("fibonacci.html")
+@app.route("/subjects/colors/")
+def colors():
+    return render_template("colors.html")
+
+
+@app.route("/subjects/art/")
+def art():
+    return render_template("art.html")
 
 # runs the application on the development server
 
