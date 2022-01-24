@@ -1,15 +1,19 @@
 from __init__ import db
-from crud.model import Users
-import random
+from templates.crud.model import Users
+# import random
 
 
 # this is method called by frontend, it has been randomized between Alchemy and Native SQL for fun
 def users_all():
+    """  May have some problems with sql in deployment
     if random.randint(0, 1) == 0:
         table = users_all_alc()
     else:
         table = users_all_sql()
     return table
+    """
+
+    return users_all_alc()
 
 
 # SQLAlchemy extract all users from database
@@ -52,7 +56,7 @@ def sqlquery_2_list(rows):
     keys = rows.keys()  # "Keys" are the columns of the sql query
     for values in rows:  # "Values" are rows within the SQL database
         row_dictionary = {}
-        for i in range(len(keys)):  # This loop lines up K, V pairs, same as JSON style
+        for j in range(len(keys)):  # This loop lines up K, V pairs, same as JSON style
             row_dictionary[keys[i]] = values[i]
         row_dictionary["query"] = "by_sql"  # This is for fun a little watermark
         out_list.append(row_dictionary)  # Finally we have a out_list row

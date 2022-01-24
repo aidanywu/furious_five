@@ -1,9 +1,31 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+<<<<<<< Updated upstream
 from templates.about.aboutus import boutus
 from templates.notebooks.notebooks import notebooks
 from templates.studyrooms.studyrooms import studyrooms
 from templates.minigames.minigames import minigames
+=======
+import requests
+import json
+from __init__ import app
+
+from starter.starter import app_starter
+from algorithm.algorithm import app_algorithm
+from api.webapi import app_api
+from templates.crud.app_crud import app_crud
+from templates.crud.app_crud_api import app_crud_api
+from y2022 import app_y2022
+
+app.register_blueprint(app_starter)
+app.register_blueprint(app_algorithm)
+app.register_blueprint(app_api)
+app.register_blueprint(app_crud)
+app.register_blueprint(app_crud_api)
+app.register_blueprint(app_y2022)
+
+# test
+>>>>>>> Stashed changes
 # create a Flask instance
 app = Flask(__name__)
 app.register_blueprint(boutus)
@@ -27,21 +49,6 @@ def timer():
 @app.route("/wCalendar/")
 def wCalendar():
     return render_template("notebooks/weekly calendar.html")
-
-
-@app.route("/crud_async/")
-def crud_async():
-    return render_template("crud/templates/crud/crud_async.html")
-
-
-@app.route("/crud/")
-def crud():
-    return render_template("crud/templates/crud/crud.html")
-
-
-@app.route("/search/")
-def search():
-    return render_template("crud/templates/crud/search.html")
 
 
 @app.route("/foff/")
