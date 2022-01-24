@@ -1,0 +1,16 @@
+{% include "layouts/base.html" %}
+<html>
+<head>
+    <script defer src="Java/feedback.js"></script>
+    <title>Feedback</title>
+</head>
+
+<body>
+<form name="feedback">
+    <label for="message">Message:</label><br>
+    <input type="text" id="message" name="message" value="" required>
+    <!-- <input type="submit" id="submit" value="Submit" onclick="send()"> -->
+</form>
+<button onclick="send()">submit</button><br>
+</body>
+</html>
