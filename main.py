@@ -176,6 +176,11 @@ def colors():
 def art():
     return render_template("art.html")
 
+
+@app.route("/subjects/sciencequiz/")
+def sciencequiz():
+    return render_template("subjects/sciencequiz.html")
+
 # runs the application on the development server
 
 
