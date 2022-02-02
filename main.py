@@ -131,6 +131,18 @@ def rockerpaperscissors():
 def sleepingsimulator():
     return render_template("minigames/sleepingsimulator.html")
 
+@app.route("/graph/")
+def graph():
+    return render_template("minigames/graph.html")
+
+@app.route("/life/")
+def life():
+    return render_template("minigames/life.html")
+
+@app.route("/snake/")
+def snake():
+    return render_template("minigames/snake.html")
+
 
 @app.route("/darkmode/")
 def darkmode():
