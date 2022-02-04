@@ -1,3 +1,38 @@
+// Search Bar Control
+// open google search window
+const search = document.getElementById('search');
+const google = 'https://www.google.com/search?q=site%3A+';
+const site = 'https://nighthawkcodingsociety.com';
+
+function submitted(event) {
+    if (event.key === 'Enter') {
+        // calculations to determine new window size at 66% of existing
+        const reduction = 0.66;  // reduce by 66%
+        const w = Math.trunc(window.innerWidth*reduction);
+        const h = Math.trunc(window.outerHeight*reduction);
+        const l = Math.trunc(window.top.screenX + ((window.innerWidth - w)/2));
+        const t = Math.trunc(window.top.screenY + ((window.outerHeight - h)/2));
+        const left = "left=" + l;
+        const top = "top=" + t;
+        const width = "width=" + w;
+        const height = "height=" + h;
+        const location = left + ", " + top + ", " + width + ", " + height
+
+        // setup and display window
+        event.preventDefault();
+        const url = google
+            + site
+            + '+'
+            + search.value;
+        const win = window.open(url, "CompSci Principles Search", location);
+        win.focus();
+    }
+}
+search.addEventListener('keypress', submitted);
+
+
+// Dark Mode Control
+// darkSwitch global element is set for convenience
 const darkSwitch=document.getElementById("darkSwitch");
 // establishes the initial state of darkSwitch on page load
 if(darkSwitch) {
@@ -20,3 +55,4 @@ function darkFunction() {
         ? localStorage.setItem("darkSwitch","dark")
         : localStorage.removeItem("darkSwitch");
 }
+// End Dark Mode Control
