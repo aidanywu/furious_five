@@ -27,8 +27,7 @@
   }
 
   .dark-mode {
-    background-color: black;
-    color: black;
+    background-color: darkslateblue;
   }
 
   h1 {
@@ -69,19 +68,7 @@
   </tr>
 </table>
 </h2>
-<div class=""container">
-<h1>Light/Dark Mode</h1>
-<div class="toggle-container">
-  <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
-</div>
-<p>lorem chsbjhdn</p>
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<script>
-  function addDarkmodeWidget() {
-    new Darkmode().showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-</script>
+
 </body>
 {% block content %}
 {% endblock %}
