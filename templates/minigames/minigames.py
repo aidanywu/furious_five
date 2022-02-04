@@ -18,6 +18,9 @@ def rockerpaperscissors():
 def sleepingsimulator():
     return render_template("minigames/sleepingsimulator.html")
 
+@minigames.route("/spacespam/")
+def spacespam():
+    return render_template("minigames/spacespam.html")
 
 @minigames.route("/graph/")
 def graph():
