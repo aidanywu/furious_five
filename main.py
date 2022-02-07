@@ -142,6 +142,11 @@ def feedback():
     return render_template("feedback.html")
 
 
+@app.route("/feedback2/")
+def feedback2():
+    return render_template("feedback2.html")
+
+
 @app.route("/subjects/")
 def subjects():
     return render_template("subjects.html")
