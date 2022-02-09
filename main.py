@@ -81,6 +81,10 @@ def timer():
 def wCalendar():
     return render_template("notebooks/weekly calendar.html")
 
+@app.route("/Calendar/")
+def Calendar():
+    return render_template("notebooks/Calendar.html")
+
 
 @app.route("/foff/")
 def foff():
