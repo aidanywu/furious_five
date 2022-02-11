@@ -9,7 +9,116 @@
 <body>
 <h2> <table style="width:90%" align="center">
     <tr>
-        <td>kjefnekrfnkerk ernkfnejkr </td>
+        <td>
+            <title>Graph</title>
+            {% block content %}
+            <div class="container py-4">
+                <div class="container py-4 bg-primary" style="text-align:center;">
+                    <canvas id="canvas" width="512" height="384" color="white"></canvas>
+                </div>
+            </div>
+
+            https://open.spotify.com/playlist/4rrMoeS5kbzzZ00bPCexmz?si=1227ca69403c402f
+            https://open.spotify.com/embed/playlist/4rrMoeS5kbzzZ00bPCexmz?utm_source=generator
+
+            <script>
+                // https://www.w3schools.com/graphics/canvas_intro.asp
+                const canvas = document.getElementById('canvas');
+                const ctx = canvas.getContext('2d');
+                const WIDTH = canvas.width;
+                const HEIGHT = canvas.height;
+                const CELL_SIZE = 16;   // CELL_SIZE block size
+
+                // grid based off of width, HEIGHT
+                function grid(){
+                    // color and pen width
+                    ctx.strokeStyle = '#2d2f34';
+                    ctx.lineWidth = 1;
+                    // make graph paper look
+                    for (let col = 0; col < WIDTH; col += CELL_SIZE) {
+                        for (let row = 0; row < HEIGHT; row += CELL_SIZE) {
+                            ctx.strokeRect(col, row, CELL_SIZE, CELL_SIZE);
+                        }
+                    }
+                }
+
+                // axis lines
+                function axis() {
+                    // color and pen width
+                    ctx.strokeStyle = '#e3e4e8';
+                    ctx.lineWIDTH = 3;
+                    // x & y zero midpoints of grid
+                    const x0 = WIDTH*.5;
+                    const y0 = HEIGHT*.5;
+                    // x-axis
+                    ctx.moveTo(0, y0);
+                    ctx.lineTo(WIDTH, y0);
+                    ctx.stroke();
+                    // y-axis
+                    ctx.moveTo(x0, 0);
+                    ctx.lineTo(x0, HEIGHT);
+                    ctx.stroke();
+                }
+
+                // square using lines
+                function square(x0, y0, len) {
+                    ctx.strokeStyle = '#2d2f34';
+                    ctx.lineWidth = 5;
+                    // NOTE canvas 0,0 is upper left corner, grid 0,0 is in middle of canvas
+                    let x = x0*CELL_SIZE + (WIDTH/2);
+                    let y = -y0*CELL_SIZE + (HEIGHT/2);
+                    let l = len*CELL_SIZE;
+                    // draw a square
+                    ctx.beginPath();
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(x+l, y);
+                    ctx.lineTo(x+l, y-l);
+                    ctx.lineTo(x, y-l);   // positive y is negative orientation in grid
+                    ctx.lineTo(x, y);
+                    ctx.stroke();
+                }
+
+                // randomly find
+                function randomPlusMinus(range) {
+                    let pluMinusSeed =  (Math.random() - 0.499) * 2; // from -.998 to .998
+                    return Math.round(pluMinusSeed * range);  // convert to rounded integer
+                }
+
+                // randomly draw squares
+                function randomDraw(i) {
+                    // recursion base case
+                    if ( i <= 0) {
+                        return;
+                    }
+                    // obtain x, y coordinates on canvas per quadrant
+                    let x = randomPlusMinus(WIDTH/CELL_SIZE/2);
+                    let y = randomPlusMinus(HEIGHT/CELL_SIZE/2);
+                    // obtain random length between 1 and 5
+                    let l = Math.floor((Math.random()) * 5) + 1;
+                    // draw square
+                    square(x, y, l);
+                    // timeout allows user to enjoy drawing effect
+                    // this function calls itself, but decrements counter before call
+                    setTimeout(() => { randomDraw(--i); }, 150);
+                }
+
+                // establish grid and axis
+                grid();
+                axis();
+
+                // Sample squares
+                square(-2, -2, 4);   // center square
+                //square(12, 8, 4);    // quadrant 1 extents
+                //square(-16, 8, 4);   // quadrant 2 extents
+                //square(-16, -12, 4); // quadrant 3 extents
+                //square(12, -12, 4);  // quadrant 4 extents
+
+                // Random squares
+                randomDraw(50);
+
+            </script>
+            {% endblock %}
+        </td>
         <td><iframe src="https://open.spotify.com/embed/playlist/7K6fVGUcL6ChCsRMJP4oOC?utm_source=generator&theme=0" width="45%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
     </tr>
 </table>

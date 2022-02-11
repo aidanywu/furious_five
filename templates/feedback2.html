@@ -20,6 +20,29 @@
 <body>
 
 <h4>Have any feedback???</h4>
-<h1><a href = "mailto: someone@gmail.com">Send Email</a></h1>
+<h1><a href = "mailto: kevin.nam04@gmail.com">Send Email</a></h1>
 </body>
+
+<script>
+    $(function() {
+        var img = $("#plane"),
+            width = img.get(0).width,
+            screenWidth = $(window).width(),
+            duration = 5000;
+
+        function animatePlane() {
+            img.css("left", -width).animate({
+                "left": screenWidth
+            }, duration, animatePlane);
+        }
+
+        animatePlane();
+    });
+</script>
+<style>
+    body { overflow: hidden }
+    #plane { position: absolute; left: -1000px; width: 50% /* <- not relevant for the animation */ }
+</style>
+<script src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqFd2FcbinTcIhwpWpSb7qDOhMGy-gM9DNPA&usqp=CAU"></script>
+<img id="plane" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqFd2FcbinTcIhwpWpSb7qDOhMGy-gM9DNPA&usqp=CAU" />
 </html>
