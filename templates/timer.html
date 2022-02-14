@@ -11,6 +11,13 @@
         }
         p {
             text-align: center;
+            color: black;
+        }
+        h1 {
+            color: #000000;
+        }
+        h2 {
+            color: #000000;
         }
     </style>
     <meta charset="UTF-8">
@@ -19,6 +26,7 @@
 
 
     <script>
+        // Code is based off timer tutorial code from W3Schools: https://www.w3schools.com/howto/howto_js_countdown.asp
         let DEEZnuts = 0;
         function timer(time) {
 
@@ -78,8 +86,7 @@
 
                 // If the count down is finished, write some text
                 if (distance <= 0) {
-                    document.getElementById("debuginfo").innerHTML = "Timer ID (DEEZnuts): " +
-                        DEEZnuts + " Timer countdown time (SISTERS): " + SISTERS;
+
                     DEEZnuts = DEEZnuts + 1;
 
                     clearInterval(x);
@@ -99,20 +106,33 @@
                     }
                 }
 
+                document.getElementById("debuginfo").innerHTML = "Timer ID (DEEZnuts): " +
+                    DEEZnuts + " // Timer countdown time (SISTERS): " + SISTERS;
+
             }, 1);
 
         }
-         if(document.getElementById('toggleDebugInfo').checked == true)
-            document.getElementById('debuginfo').removeAttribute("hidden")
-         if(document.getElementById('toggleDebugInfo').checked == false)
-            document.getElementById('debuginfo').setAttribute("hidden", "")
+
+
+        function displayDebugInfo() {
+            if(document.getElementById('toggleDebugInfo').checked == true)
+                document.getElementById('debuginfo').removeAttribute("hidden")
+            if(document.getElementById('toggleDebugInfo').checked == false)
+                document.getElementById('debuginfo').setAttribute("hidden", "")
+        }
+
+
+
+
+
+        
     </script>
 </head>
 <body>
 <a class="center" onclick="timer(0)" onclick=document.getElementById('2').setAttribute("hidden","")>
     <img class="center" id="2" style="width: 200px; height: auto" src="/static/assets/POMODORO.png">
 </a>
-<input type="checkbox" id="toggleDebugInfo" value="displayDebugInfo">Show Debug Information?
+<input type="checkbox" id="toggleDebugInfo" value="displayDebugInfo" onclick="displayDebugInfo()">Show Debug Information?
 <h1 id="demo"></h1>
 <p hidden id="debuginfo"></p>
 <p id="display"></p>
