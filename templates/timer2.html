@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "layouts/base.html" %}
+<head>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        p {
+            text-align: center;
+            color: black;
+        }
+        h1 {
+            color: #000000;
+        }
+        h2 {
+            color: #000000;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>TOMATO TIMER</title>
+    <!-- Display the countdown timer in an element -->
+
+
+    <script>
+
+
+
+        const timerLengths = []
+        function setTimerLengths(){
+            timerLengths[0] = document.getElementById('timerlength1').value
+            timerLengths[1] = document.getElementById('timerlength2').value
+            timerLengths[2] = document.getElementById('timerlength3').value
+            timerLengths[3] = document.getElementById('timerlength4').value
+            timerLengths[4] = document.getElementById('timerlength5').value
+            timerLengths[5] = document.getElementById('timerlength6').value
+            timerLengths[6] = document.getElementById('timerlength7').value
+            timerLengths[7] = document.getElementById('timerlength8').value
+                console.log(timerLengths)
+
+        }
+
+
+
+        // Code below is based off timer tutorial code from W3Schools: https://www.w3schools.com/howto/howto_js_countdown.asp
+        let DEEZnuts = 0;
+        function timer(time) {
+            document.getElementById('2').setAttribute("hidden","")
+            console.log("function started")
+
+            let SISTERS = 0;
+
+            let rn = new Date().getTime();
+
+            // Set the date we're counting down to !!MAKE SURE TO ADD BACK THE 60*!! it is only gone for testing purposes
+            // let timerCoefficient = document.getElementById('timerconfig').value
+            let countDownDate = new Date(rn + document.getElementById('timerconfig').value*1000*time).getTime();
+
+            // Update the count down every 1 second
+            let x = setInterval(function () {
+
+                console.log("async function loop started with Timer ID (DEEZnuts): " +
+                DEEZnuts + " // Timer countdown time (SISTERS): " + SISTERS)
+                // Get today's date and time
+                let now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                let distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                let yourMOM = Math.floor(distance % 1000)
+
+                // Display the result in the element with id="demo"
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "." + yourMOM + " s   " ;
+
+
+                SISTERS = timerLengths[DEEZnuts]
+
+                // If the count down is finished, write some text
+                if (distance <= 0) {
+
+
+
+
+                    if(DEEZnuts==1 || DEEZnuts==3 || DEEZnuts==5 || DEEZnuts==7 ){
+                        document.getElementById('display').innerText = "ITS TIME FOR A BREAK SISTERS!!"
+                        document.getElementById('1').removeAttribute("hidden")
+
+                    }
+                    if(DEEZnuts==0 || DEEZnuts==2 || DEEZnuts==4 || DEEZnuts==6 || DEEZnuts==8){
+                        document.getElementById('display').innerText= "GET TO WORRKKKK"
+                        document.getElementById('1').setAttribute("hidden", "")
+                    }
+                    DEEZnuts = DEEZnuts + 1;
+                    document.getElementById("debuginfo").innerHTML = "Timer ID (DEEZnuts): " +
+                        DEEZnuts + " // Timer countdown time (SISTERS): " + SISTERS;
+                    if (DEEZnuts==8){
+                        DEEZnuts = 0;
+                    }
+                    clearInterval(x);
+                    timer(SISTERS);
+                }
+
+
+
+            }, 1);
+
+        }
+
+
+        function displayDebugInfo() {
+            if(document.getElementById('toggleDebugInfo').checked == true)
+                document.getElementById('debuginfo').removeAttribute("hidden")
+            if(document.getElementById('toggleDebugInfo').checked == false)
+                document.getElementById('debuginfo').setAttribute("hidden", "")
+            if(document.getElementById('toggleDebugMode').checked == true)
+                document.getElementById('timerconfig').removeAttribute("hidden")
+            if(document.getElementById('toggleDebugMode').checked == false)
+                document.getElementById('timerconfig').setAttribute("hidden", "")
+        }
+
+        
+    </script>
+</head>
+<p>
+<a class="center"  id="2" onclick="timer(0)">
+    <img class="center" style="width: 200px; height: auto" src="/static/assets/POMODORO.png">
+</a>
+<h1 id="demo"></h1>
+<input type="checkbox" id="toggleDebugInfo" value="displayDebugInfo" onclick="displayDebugInfo()">Show Debug Information?
+<br>
+<input type="checkbox" id="toggleDebugMode" value="displayDebugInfo" onclick="displayDebugInfo()">Debug Mode
+<input hidden style="width: 50px;" type="number" id="timerconfig" value="1"><p hidden id="timerconfig">Debug Configuration- Enter the amount of ticks in a second- Set to 60 for regular speed</p>
+<table>
+    <tr>
+        <th><input style="width: 50px" type="number" id="timerlength1"></th>
+        <th><input style="width: 50px" type="number" id="timerlength2"></th>
+        <th><input style="width: 50px" type="number" id="timerlength3"></th>
+        <th><input style="width: 50px" type="number" id="timerlength4"></th>
+        <th><input style="width: 50px" type="number" id="timerlength5"></th>
+        <th><input style="width: 50px" type="number" id="timerlength6"></th>
+        <th><input style="width: 50px" type="number" id="timerlength7"></th>
+        <th><input style="width: 50px" type="number" id="timerlength8"></th>
+    </tr>
+    <br>
+    <button onclick="setTimerLengths()">Set Lengths</button>
+
+</table>
+<p hidden id="debuginfo"></p>
+<p id="display"></p>
+<img src="/static/assets/BREAKTIME.png" hidden id="1">
+</body>
+</html>
