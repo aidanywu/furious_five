@@ -65,9 +65,9 @@
 </table>
 
 ### Weekly Process <a id="progress" name="progress"></a>
-#### · ([Week 1:]) Project Approval
-#### · ([Week 2:]) Home Pages
-#### · ([Week 3:]) WIP Project Review
+#### · Week 1: Project Approval
+#### · Week 2: Home Pages
+#### · Week 3: WIP Project Review
 
 ## Week 3 - WIP Project Review
 <table>
