@@ -24,43 +24,43 @@
   </tr>
   <tr>
     <td>Vaishavi Jayashankar</td>
-    <td>[@vaishavijay](https://github.com/vaishavijay)</td>
+    <td><a href="https://github.com/vaishavijay">@vaishavijay</a></td>
     <td>Scrum Master</td>
-    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=vaishavijay)</td>
-    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Avaishavijay)</td>
-    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Avaishavijay)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/commits?author=vaishavijay">Commits</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Avaishavijay">Tasks</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Avaishavijay">Scrumboard</a></td>
   </tr>
   <tr>
     <td>Soren Zhuang</td>
-    <td>[@wangzi190](https://github.com/wangzi190)</td>
+    <td><a href="https://github.com/wangzi190">@wangzi190</a></td>
     <td>Technicals Officer</td>
-    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=wangzi190)</td>
-    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awangzi190)</td>
-    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awangzi190)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/commits?author=wangzi190">Commits</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awangzi190">Tasks</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awangzi190">Scrumboard</a></td>
   </tr>
   <tr>
     <td>Aidan Wu</td>
-    <td>[@aidanywu](https://github.com/aidanywu)</td>
+    <td><a href="https://github.com/aidanywu">@aidanywu</a></td>
     <td>Github Admin</td>
-    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=aidanywu)</td>
-    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Aaidanywu)</td>
-    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Aaidanywu)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/commits?author=aidanywu">Commits</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Aaidanywu">Tasks</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Aaidanywu">Scrumboard</a></td>
   </tr>
   <tr>
     <td>William Wu</td>
-    <td>[@willcyber](https://github.com/willcyber)</td>
+    <td><a href="https://github.com/willcyber">@willcyber</a></td>
     <td>Primary Designer</td>
-    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=willcyber)</td>
-    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awillcyber)</td>
-    <td>Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awillcyber)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/commits?author=willcyber">Commits</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awillcyber">Tasks</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awillcyber">Scrumboard</a></td>
   </tr>
   <tr>
     <td>William Li</td>
-    <td>[@3ghin5](https://github.com/3ghin5)</td>
+    <td><a href="https://github.com/vaishavijay">@3ghin5</a></td>
     <td>Deployment Manager</td>
-    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=3ghin5)</td>
-    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3A3ghin5)</td>
-    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3A3ghin5)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/commits?author=3ghin5">Commits</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3A3ghin5">Tasks</a></td>
+    <td><a href="https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3A3ghin5">Scrumboard</a></td>
   </tr>
 </table>
 
@@ -78,27 +78,27 @@
   </tr>
   <tr>
     <td>Vaishavi Jayashankar</td>
-    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td>
     <td> - </td>
   </tr>
   <tr>
     <td>Soren Zhuang</td>
-    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td>
     <td> - </td>
   </tr>
   <tr>
     <td>Aidan Wu</td>
-    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td>
     <td> - </td>
   </tr>
   <tr>
     <td>William Wu</td>
-    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td>=
     <td> - </td>
   </tr>
   <tr>
     <td>William Li</td>
-    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td>
     <td> - </td>
   </tr>
 </table>
