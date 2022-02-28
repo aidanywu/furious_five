@@ -77,6 +77,11 @@ def timer():
     return render_template("timer.html")
 
 
+@app.route("/advancedtimer/")
+def timer2():
+    return render_template("timer2.html")
+
+
 @app.route("/wCalendar/")
 def wCalendar():
     return render_template("notebooks/weekly calendar.html")

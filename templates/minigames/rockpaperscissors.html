@@ -31,7 +31,18 @@ width:100%;
 <button class="options">Paper</button>
 <button class="options">Scissors</button>
 
+<div> Your Score: </div>
+<p id="humanScore">0</p>
+
+
+Computer Score:
+    <p id="computerScore">0</p>
+
+
 <script>
+var scoreComputer = document.getElementById("computerScore");
+var scoreHuman = document.getElementById("humanScore");
+
     const options = document.querySelectorAll(".options");
 
     options.forEach((option) => {
@@ -58,24 +69,30 @@ width:100%;
         if (pInput === "Rock") {
             if (cInput === "Scissors") {
                 alert(`${currentMatch} = You Win`);
+                scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
             } else {
                 alert(`${currentMatch} = Computer Wins`);
+                scoreComputer.innerHTML = parseInt(scoreComputer.innerHTML)+1;
             }
         }
         // Paper
         else if (pInput === "Paper") {
             if (cInput === "Rock") {
                 alert(`${currentMatch} = You Win`);
+                scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
             } else {
                 alert(`${currentMatch} = Computer Wins`);
+                scoreComputer.innerHTML = parseInt(scoreComputer.innerHTML)+1;
             }
         }
         // Scissors
         else if (pInput === "Scissors") {
             if (cInput === "Paper") {
                 alert(`${currentMatch} = You Win`);
+                scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
             } else {
                 alert(`${currentMatch} = Computer Wins`);
+                scoreComputer.innerHTML = parseInt(scoreComputer.innerHTML)+1;
             }
         }
     }
