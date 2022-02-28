@@ -93,7 +93,7 @@
   </tr>
   <tr>
     <td>William Wu</td>
-    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td
+    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td>
     <td> - </td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@
 </table>
   
 ## Pair Share Journals <a id="journals" name="journals"></a>
-#### [Link to Aidan W and William W’s Journal](https://docs.google.com/document/d/1Byg2xdhazwebff4lFHdSSj-k-xkj035d9EHa7PSV_1A/edit?usp=sharing)
+#### [Link to Aidan W and William W’s Journal](https://docs.google.com/document/d/1Byg2xdhazwebff4lFHdSSjk-xkj035d9EHa7PSV_1A/edit?usp=sharing)
 #### [Link to Soren Z, William L, and Vaishavi J’s Journal](https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing)
 
 ## Ideation <a id="idea" name="idea"></a>
