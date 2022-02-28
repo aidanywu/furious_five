@@ -62,6 +62,7 @@
     <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3A3ghin5)</td>
     <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3A3ghin5)</td>
   </tr>
+</table>
 
 ### Weekly Process <a id="progress" name="progress"></a>
 #### · ([Week 1:]) Project Approval
