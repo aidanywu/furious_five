@@ -13,13 +13,55 @@
 ### 4. [Implementation Progress](#progress)
 
 ## Contributors <a id="contributors" name="contributors"></a>
-| Name | GitHub ID and Profile | Role | Commits | Tasks | Scrumboard |
-|:-----|:----------------------|:----:|:-------:|:-----:|:----------:|
-| Vaishavi Jayashankar | [@vaishavijay](https://github.com/vaishavijay) | Scrum Master | [Commits](https://github.com/aidanywu/furious_five/commits?author=vaishavijay) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Avaishavijay) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Avaishavijay)
-| Soren Zhuang | [@wangzi190](https://github.com/wangzi190) | Technicals Officer | [Commits](https://github.com/aidanywu/furious_five/commits?author=wangzi190) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awangzi190) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awangzi190)
-| Aidan Wu | [@aidanywu](https://github.com/aidanywu) | Github Admin | [Commits](https://github.com/aidanywu/furious_five/commits?author=aidanywu) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Aaidanywu) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Aaidanywu)
-| William Wu | [@willcyber](https://github.com/willcyber) | Primary Designer | [Commits](https://github.com/aidanywu/furious_five/commits?author=willcyber) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awillcyber) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awillcyber)
-| William Li | [@3ghin5](https://github.com/3ghin5) | Deployment Manager | [Commits](https://github.com/aidanywu/furious_five/commits?author=3ghin5) | [Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3A3ghin5) | [Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3A3ghin5)
+<table>
+  <tr>
+    <th>Name</th>
+    <th>GitHub ID and Profile</th>
+    <th>Role</th>
+    <th>Commits</th>
+    <th>Tasks</th>
+    <th>Scrumboard</th>
+  </tr>
+  <tr>
+    <td>Vaishavi Jayashankar</td>
+    <td>[@vaishavijay](https://github.com/vaishavijay)</td>
+    <td>Scrum Master</td>
+    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=vaishavijay)</td>
+    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Avaishavijay)</td>
+    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Avaishavijay)</td>
+  </tr>
+  <tr>
+    <td>Soren Zhuang</td>
+    <td>[@wangzi190](https://github.com/wangzi190)</td>
+    <td>Technicals Officer</td>
+    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=wangzi190)</td>
+    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awangzi190)</td>
+    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awangzi190)</td>
+  </tr>
+  <tr>
+    <td>Aidan Wu</td>
+    <td>[@aidanywu](https://github.com/aidanywu)</td>
+    <td>Github Admin</td>
+    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=aidanywu)</td>
+    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Aaidanywu)</td>
+    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Aaidanywu)</td>
+  </tr>
+  <tr>
+    <td>William Wu</td>
+    <td>[@willcyber](https://github.com/willcyber)</td>
+    <td>Primary Designer</td>
+    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=willcyber)</td>
+    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3Awillcyber)</td>
+    <td>Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3Awillcyber)</td>
+  </tr>
+  <tr>
+    <td>William Li</td>
+    <td>[@3ghin5](https://github.com/3ghin5)</td>
+    <td>Deployment Manager</td>
+    <td>[Commits](https://github.com/aidanywu/furious_five/commits?author=3ghin5)</td>
+    <td>[Tasks](https://github.com/aidanywu/furious_five/issues?q=is%3Aissue+assignee%3A3ghin5)</td>
+    <td>[Scrumboard](https://github.com/aidanywu/furious_five/projects/1?card_filter_query=assignee%3A3ghin5)</td>
+  </tr>
 
 ### Weekly Process <a id="progress" name="progress"></a>
 #### · ([Week 1:]) Project Approval
@@ -27,13 +69,37 @@
 #### · ([Week 3:]) WIP Project Review
 
 ## Week 3 - WIP Project Review
-| Name | Evidence | Grade |
-| ---  | ---      | ---   |
-| Vaishavi Jayashankar | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
-| Soren Zhuang | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
-| Aidan Wu | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
-| William Wu | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
-| William Li | [Ticket](https://github.com/aidanywu/furious_five/issues/67) | - |
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Evidence</th>
+    <th>Grade</th>
+  </tr>
+  <tr>
+    <td>Vaishavi Jayashankar</td>
+    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>Soren Zhuang</td>
+    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>Aidan Wu</td>
+    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>William Wu</td>
+    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>William Li</td>
+    <td>[Ticket](https://github.com/aidanywu/furious_five/issues/67)</td>
+    <td> - </td>
+  </tr>
 
 ## Pair Share Journals <a id="journals" name="journals"></a>
 #### [Link to Aidan W and William W’s Journal](https://docs.google.com/document/d/1Byg2xdhazwebff4lFHdSSj-k-xkj035d9EHa7PSV_1A/edit?usp=sharing)
