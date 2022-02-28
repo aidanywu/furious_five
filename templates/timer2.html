@@ -29,16 +29,12 @@
 
 
 
-        const timerLengths = []
+        const timerLengths = [25,5,25,5,25,5,25,30]
         function setTimerLengths(){
-            timerLengths[0] = document.getElementById('timerlength1').value
-            timerLengths[1] = document.getElementById('timerlength2').value
-            timerLengths[2] = document.getElementById('timerlength3').value
-            timerLengths[3] = document.getElementById('timerlength4').value
-            timerLengths[4] = document.getElementById('timerlength5').value
-            timerLengths[5] = document.getElementById('timerlength6').value
-            timerLengths[6] = document.getElementById('timerlength7').value
-            timerLengths[7] = document.getElementById('timerlength8').value
+
+            for (let i = 0; i < timerLengths.length; i++) {
+                timerLengths[i] = document.getElementById('timerlength'+ String(i+1)).value
+            }
                 console.log(timerLengths)
 
         }
