@@ -93,7 +93,7 @@
   </tr>
   <tr>
     <td>William Wu</td>
-    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td>=
+    <td><a href="https://github.com/aidanywu/furious_five/issues/67">Ticket</a></td
     <td> - </td>
   </tr>
   <tr>
