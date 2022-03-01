@@ -19,3 +19,4 @@
 #### [Link to Aidan W and William W’s Journal](https://docs.google.com/document/d/1Byg2xdhazwebff4lFHdSSj-k-xkj035d9EHa7PSV_1A/edit?usp=sharing)
 #### [Link to Soren Z, William L, and Vaishavi J’s Journal](https://docs.google.com/document/d/1JlCWDvBfgdGk6yeL6dtcpMhvRKLAqF3XmNti3TT9wHY/edit?usp=sharing)
 
+
