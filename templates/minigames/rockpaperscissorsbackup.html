@@ -43,13 +43,13 @@
     var message = document.getElementById("message");
 
     const options = document.querySelectorAll(".options");
-    // forEach is my Iteration
+
     options.forEach((option) =>
     {
         option.addEventListener("click", function()
         {
-            const compOptions = ["Rock", "Paper", "Scissors"];
-            const compInput = compOptions[Math.floor(3 * Math.random())];
+            const cOptions = ["Rock", "Paper", "Scissors"];
+            const compInput = cOptions[Math.floor(3 * Math.random())];
             const personInput = this.innerText;
             compareInputs(personInput, compInput);
         });
@@ -64,21 +64,21 @@
         }
         // If player selects Rock
         else if (personInput == "Rock" && compInput == "Scissors") {
-                alert(`${currentMatch} = You Win`);
-                scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
-            }
+            alert(`${currentMatch} = You Win`);
+            scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
+        }
 
         // If player selects Paper
         else if (personInput == "Paper" && compInput == "Rock") {
-                alert(`${currentMatch} = You Win`);
-                scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
-            }
+            alert(`${currentMatch} = You Win`);
+            scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
+        }
 
         // If player selects Scissors
         else if (personInput == "Scissors" && compInput == "Paper") {
-                alert(`${currentMatch} = You Win`);
-                scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
-            }
+            alert(`${currentMatch} = You Win`);
+            scoreHuman.innerHTML = parseInt(scoreHuman.innerHTML)+1;
+        }
 
         else {
             alert(`${currentMatch} = Computer Wins`);
@@ -94,14 +94,14 @@
             rock.style.display = "none"
             paper.style.display = "none"
             scissors.style.display = "none"
-            message.innerHTML = "<span style='color: green;font-size:30px;'>You won " + scoreHuman.innerHTML + " - " + scoreComputer.innerText
+            message.innerHTML = "You won " + scoreHuman.innerHTML + " - " + scoreComputer.innerText
             scoreHuman.innerHTML = 0;
             scoreComputer.innerHTML = 0;
         } else if (scoreComputer.innerHTML == '5') {
             rock.style.display = "none"
             paper.style.display = "none"
             scissors.style.display = "none"
-            message.innerHTML = "<span style='color: red;font-size:30px;'>You lost " + scoreHuman.innerHTML + " - " + scoreComputer.innerText
+            message.innerHTML = "You lost " + scoreHuman.innerHTML + " - " + scoreComputer.innerText
             scoreHuman.innerHTML = 0;
             scoreComputer.innerHTML = 0;
         } else {
